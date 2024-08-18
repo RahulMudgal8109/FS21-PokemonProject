@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .card{
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(15, 184, 15);
+            margin: 10px;
+        }
+        .id{
+            background-color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .type{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .outputScreen{
+            padding: 0 40px 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="row">
+            <h1>GeeksterMon</h1>
+        </div>
+        <div class="row">
+            <div class="upper d-flex justify-content-center align-items-center">
+                <select name="type" id="type" class="m-2">
+                    <option value="">Types</option>
+                    <option value="grass">Grass</option>
+                    <option value="fire">Fire</option>
+                    <option value="water">Water</option>
+                    <option value="bug">Bug</option>
+                    <option value="normal">Normal</option>
+                    <option value="poison">Poison</option>
+                    <option value="electric">Electric</option>
+                    <option value="ground">Ground</option>
+                    <option value="fairy">Fairy</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="rock">Rock</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="ice">Ice</option>
+                    <option value="dragon">Dragon</option>
+                </select>
+                <button id="filterByType" class="m-2">Filter By Type</button>
+                <button id="reset" class="m-2">Reset</button>
+            </div>
+            <div class="lower d-flex flex-column justify-content-center align-items-center m-2">
+                <input type="text" id="name" placeholder="Enter the pokemon name"/>
+            </div>
+        </div>
+    </div>
+    <div  id="outputScreen" class="outputScreen">
+        <!-- <div class="card">
+            <div class="id">
+                <h5>#1</h5>
+            </div>
+            <div class="image">
+                <img src="images/1.png"/>
+            </div>
+            <div class="name">
+                <p>Bulbasur</p>
+            </div>
+            <div class="type">
+                <p>Grass</p>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
