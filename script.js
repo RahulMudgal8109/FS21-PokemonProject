@@ -3,7 +3,8 @@ let filterByType=document.getElementById("filterByType");
 let reset=document.getElementById("reset");
 let filterByName=document.getElementById("name");
 let outputScreen=document.getElementById("outputScreen");
-
+let loading=true;
+let loaderElement=document.getElementById("loaderElement");
 
 filterByType.addEventListener('click',function()
 {
@@ -38,7 +39,11 @@ let colors={
 async function fetchPokemon(type="",name="") {
     let data=[];
     outputScreen.innerHTML=" ";
-    for (let i = 1; i <= 50; i++) {
+    if(loading)
+    {
+        loaderElement.style.display="block"
+    }
+    for (let i = 1; i <= 100; i++) {
       let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
        let item=await response.json();
        data.push(item);
@@ -50,6 +55,10 @@ async function fetchPokemon(type="",name="") {
   }
  function generateCard(data,type,name)
  {
+    loading=!loading;
+    {
+        loaderElement.style.display="none"
+    }
     data.filter((ele)=>
     {
         if(type!="" )
