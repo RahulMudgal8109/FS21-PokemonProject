@@ -38,7 +38,7 @@ let colors={
 async function fetchPokemon(type="",name="") {
     let data=[];
     outputScreen.innerHTML=" ";
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 50; i++) {
       let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
        let item=await response.json();
        data.push(item);
