@@ -8,15 +8,18 @@ let loaderElement=document.getElementById("loaderElement");
 
 filterByType.addEventListener('click',function()
 {
+    loading=true;
     fetchPokemon(type.value,"")
 })
 reset.addEventListener('click',function()
 {
+    loading=true;
     fetchPokemon("","");
     type.value="";
 })
 filterByName.addEventListener('keyup',function()
 {
+    loading=true;
     fetchPokemon("",filterByName.value)
 
 })
